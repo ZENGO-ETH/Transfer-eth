@@ -1,0 +1,56 @@
+.network {
+
+margin-left: 250px;
+}
+
+.chainid {
+margin-left: 320px;
+
+}
+
+
+.address {
+  margin-right: 240px;
+  margin-buttom: 200px;
+  display: flex;
+}
+
+.send {
+  display: flex;
+}
+
+.send:to {
+  margin-left: 100px;
+  display: flex;
+}
+
+.rand {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.hand {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.card {
+  background: DarkCyan;
+  position: relative;
+  border: 40px;
+  show-border: inset 5px 5px 5px rgba(0,0,0,0,15),
+  inset -5px -5px 5px rgba(255,255,255,0,15),
+  5px 5px 5px rgba(0,0,0,0,15),
+  -5px -5px 5px rgba(255,255,255,0,15),
+}
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 5px;
+  border-radius: 35px;
+  transition: 0.5s;
+}
+
+.card:hover::before {
+  transform: translate(40px, -40px) ;
+}

@@ -1,0 +1,41 @@
+{
+  "name": "hardhat-faucet",
+  "version": "1.0.0",
+  "description": "Hardhat plugin for Faucet",
+  "main": "dist/index.js",
+  "keywords": [
+    "hardhat",
+    "faucet",
+    "bsc",
+    "bnb",
+    "testnet",
+    "plugin"
+  ],
+  "author": "Han Lin Yap (https://yap.nu)",
+  "license": "ISC",
+  "funding": {
+    "type": "individual",
+    "url": "https://github.com/sponsors/codler"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codler/hardhat-faucet.git"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "hardhat faucet --account 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "hardhat": "*"
+  },
+  "devDependencies": {
+    "@types/mocha": "^9.0.0",
+    "hardhat": "^2.6.8",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.4.4"
+  },
+  "dependencies": {
+    "puppeteer": "^11.0.0"
+  }
+}

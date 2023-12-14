@@ -1,0 +1,34 @@
+{
+  "name": "hardhat-project",
+  "dependencies": {
+    "@flashbots/ethers-provider-bundle": "^0.6.2",
+    "@glif/filecoin-address": "^2.0.43",
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.2",
+    "@nomicfoundation/hardhat-ethers": "^3.0.5",
+    "@nomiclabs/hardhat-ethers": "^2.2.3",
+    "@nomiclabs/hardhat-etherscan": "^3.1.8",
+    "@nomiclabs/hardhat-waffle": "^2.0.6",
+    "@nomiclabs/hardhat-web3": "^2.0.0",
+    "@openzeppelin/contracts": "^5.0.1",
+    "@types/node": "^20.10.4",
+    "dotenv": "^16.3.1",
+    "hardhat-faucet": "^1.0.0",
+    "hardhat-live-fork": "^0.0.1",
+    "ts-node": "^10.9.2",
+    "tslib": "^2.6.2",
+    "typescript": "^5.3.3",
+    "web3-providers-http-proxy": "^0.8.3"
+  },
+  "version": "1.0.0",
+  "main": "hardhat.config.js",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

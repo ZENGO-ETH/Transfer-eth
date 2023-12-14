@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.body {
+  background-image: linear-gradient(to bottom, rgba(100,255,220,1.0), rgba(26,145,220,0.9));
+  text-align: center;
+}
+
+.app {
+  text-align: center;
+  padding: 4px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto'>
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  align-items: center;
+  box-sizing: border-box;
+  font-family: 'Poppins' , sans-serif;
+}
+
+.wrapper:Button {
+  background: MediumTurquoise;
+}
+
+.title {
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 10px;
+  padding: 4px;
+  padding-left: 6px;
+  margin-right: 390px;
+}
+
+.main {
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+.app-header {
+  margin-bottom: 10px;
+}
+
+.wrapper {
+  boxShadow: "5px 5px 10px -9px rgba(0,0,0,0.75)";
+  position: "absolute";
+  borderBottomLeftRadius : 5px;
+  borderBottomRightRadius: 5px;
+  border-width: 4px;
+  border-style: solid;
+  border-color: DarkBlue;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+block {
+  boxShadow: "5px 5px 10px -9px rgba(0,0,0,0.75)";
+  position: "absolute";
+  backgroundColor: "rgba(0,0,0, 0.3)";
+  borderBottomLeftRadius : 5px;
+  borderBottomRightRadius: 5px;
+  border-width: 4px;
+  border-style: solid;
+  border-color: black;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.title {
+  font-size: 17px;
+  font-family: sans-serif;
+  background-color: red;
+  flex-direction: column;
+}
+
+.block {
+  color: DarkSlateGrey;
+}
+
+.balance {
+  color: DarkSlateGrey;
+}
+
+.rpc {
+  color: DarkSlateGrey;
+}
+
+.txhash {
+  color: DarkSlateGrey;
+}
+
+.address {
+  color: DarkSlateGrey;
+}
+
+.wrapper {
+  position: relative;
+  border-radius: 8px;
+}
+
+.wrapper form Input[type="submit"]{
+  border: none;
+  outline: none;
+  padding: 9px 25px;
+  background: MediumTurquoise;
+  cursor: pointer;
+  font-size: 0.9em;
+  border-radius: 4px;
+  font-weight: 600;
+  width: 100px;
+  margin-top: 10px;
+}
+
+.wrapper::before
+ {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(0deg, transparent, transparent, bule, bule, bule,);
+}
+
+.title {
+  font-size: 8px;
+}
+
+.h1 {
+  font-size: 8px;
+  size: 9px;
+}
