@@ -1,22 +1,53 @@
-//import Uniswap from "./Components/Swap.js";
-//import RPC from "./Components/jsonrpc.js";
 import "./App.css";
-//import "./index.css";
-import Connect from "./Components/ConnectWallet.tsx";
-import Block from "./Components/BlockNumber.js";
-import Balance from "./Components/Balance.tsx";
-//import TX from "./Components/GetTransaction.js";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  NavLink,
+} from "react-router-dom";
 
-//import "./App.css";
-//import ethers from "ethers";
+import Home from "./Components/index.js";
+import Testnet from "./Components/Helper.js";
 
 export default function App(){
+
+const httpHeaders = {
+   "Content-Type": "application/json",
+   "Access-Control-Allow-Origin": "*",
+   "Access-Control-Allow-Headers": "X-Requested-With"
+ }
+
  return(
-  <div className="body">
-   <div className="app">
-    <Connect />
-    <Balance />
+   <div className="body">
+    <div className="app">
+     <BrowserRouter>
+      <div className="Home">
+       <NavLink
+        to="/"
+        >
+       Home
+      </NavLink>
+     <NavLink
+       to="/Testnet"
+       >
+       Testnet
+      </NavLink>
+     </div>
+     <Routes>
+      <Route
+       exact
+       path="/"
+       element={<Home />}
+      />
+      <Route
+      exact
+      path="/Testnet"
+      element={<Testnet />}
+     />
+     </Routes>
+     </BrowserRouter>
+    </div>
    </div>
-  </div>
+
   );
 }

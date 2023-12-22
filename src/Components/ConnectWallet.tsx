@@ -28,7 +28,12 @@ export default function Home(props) {
   useEffect(() => {
     getCurrentWalletConnected();
     addWalletListener();
-  }, [walletAddress]);
+  }, [
+      walletAddress,
+      console.log(" 🚀 ChainId ", chainId),
+      console.log(" 🌐 Network: ", name),
+      console.log(" ⚙️ Signer ", signer)
+   ]);
 
   const connectWallet = async () => {
     if (typeof window != "undefined" && typeof window.ethereum != "undefined") {

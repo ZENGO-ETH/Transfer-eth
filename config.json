@@ -1,0 +1,11 @@
+{
+	"etherscanroot": "http://testnet.etherscan.io/address/",
+	"payoutfrequencyinsec": 60,
+	"payoutamountinether": 0.1,
+	"queuesize": 5,
+	"walletpwd": "test",
+	"httpport": 3000,
+	"web3": {
+		"host": "https://eth-goerli.g.alchemy.com/v2/wclNpXmfZtKJEXQ85Ze5NpiHtPykJAQl"
+	}
+}

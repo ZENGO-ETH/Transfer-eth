@@ -1,5 +1,5 @@
 import "./style.css";
-import { Button, Input} from "antd";
+import { Button, Input, Form, Popconfirn} from "antd";
 import { useEffect, useState } from "react";
 import { ethers ,utils } from "ethers";
 
@@ -8,6 +8,12 @@ export default function TX(){
   const [ errorMessage, setErrorMessage ] = useState(null);
   const [ defaultAccount, setDefaultAccount ] = useState(null);
   const [ userBalance, setUserBalance ] = useState(null);
+  //const [ Tx, setTX] = useState("");
+
+  useEffect(() => {}, [
+     console.log("defaultAccount", defaultAccount),
+     console.log("userBalance", userBalance)
+   ]);
 
   const connectwallet = () => {
     if (window.ethereum) {
@@ -29,9 +35,11 @@ export default function TX(){
     window.ethereum.request({method: 'eth_getBalance', params: [String(accountAddress), "latest"]})
     .then(balance => {
       const wallet = setUserBalance(utils.formatEther(balance))
-      console.log("get user wallet ",wallet)
+      //console.log("get user wallet ",wallet)
     })
   };
+
+
 
   async function sendTransaction(e){
     let params = [{
@@ -39,13 +47,14 @@ export default function TX(){
       to: e.target.to_address.value,
       gas: Number(42000).toString(16),
       gasPrice: Number(28000000000).toString(16),
-      value: e.target.value_eth.value,
+      value: utils.formatEther(e.target.value_eth.value),
    }]
    
   let result = await window.ethereum.request({method: "eth_sendTransaction", params}).catch((err) => {
     console.log(err)
   })
  }
+
 
   return(
      <div className="app">
@@ -67,7 +76,7 @@ export default function TX(){
 	<br />
         <h1> Get Ξther Transaction </h1>
        <br />
-       <form onSubmit={sendTransaction}> 
+       <Form onSubmit={sendTransaction}> 
        <div className="rand">
        <Input type="text" name="to_address" placeholder="Address" />
        </div>
@@ -77,7 +86,7 @@ export default function TX(){
        </div>
        <br />
        <Input type="submit" value="submit" />
-       </form>
+       </Form>
        <br />
       </div>
      </div>

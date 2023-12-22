@@ -8,7 +8,7 @@ export default function App(){
   const [blockNumber, setBlockNumber] = useState(null);
 
   useEffect(() => {
-    console.log(" 🔎 latest BlockNumber", handleButton1());
+    console.log(" 🔎 latest BlockNumber", blockNumber);
   }, []);
 
   const ethers = require('ethers')
@@ -23,7 +23,7 @@ export default function App(){
   const handleButton1 = async () => {
     const latest_block = await provider.getBlockNumber('latest');
     setBlockNumber(latest_block);
-    console.log(" 🔎 blockNumber " + blockNumber)
+//    console.log(" 🔎 blockNumber " + blockNumber)
   }
 
   

@@ -134,3 +134,22 @@ block {
   font-size: 8px;
   size: 9px;
 }
+
+Home {
+  display: "flex";
+  background: "black";
+  padding: "10px";
+  font-size: "20px";
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+Goor {
+  margin-left: 10px;   
+}
+
+Hoor {
+  margin-right: 10px;
+}
